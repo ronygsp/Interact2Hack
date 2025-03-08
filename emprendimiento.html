@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Para que se ajuste correctamente en dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maresianos CORP</title>
+  <!-- Enlace a tu archivo de estilos externo -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado con botón de retroceso y nombre de la empresa -->
+        <header class="header">
+          <nav class="nav">
+            <button class="back-button">&larr;</button>
+            <h1 class="company-name">Maresianos CORP</h1>
+          </nav>
+        </header>
+    
+        <!-- Sección de saldo disponible -->
+        <section class="saldo-section">
+          <p class="saldo-label">Saldo disponible</p>
+          <p class="saldo-amount">$458.92</p>
+          <button class="cobrar-button">Cobrar deuda!</button>
+        </section>
+    
+        <!-- Sección de pagos pendientes -->
+        <section class="pagos-pendientes-section">
+          <h2 class="section-title">Pagos pendientes</h2>
+        
+          <!-- Tarjeta de pago pendiente 1 -->
+          <article class="pago-card">
+            <h3 class="pago-titulo">Bejamin Vaca</h3>
+            <p class="pago-subtitulo">Trabajador</p>
+            <p class="pago-monto">$50</p>
+            <p class="pago-fecha">Fecha límite 13/3/2025</p>
+          </article>
+      
+          <!-- Tarjeta de pago pendiente 2 -->
+          <article class="pago-card">
+            <h3 class="pago-titulo">Cuota de Luz</h3>
+            <p class="pago-subtitulo">Servicio básico</p>
+            <p class="pago-monto">$100</p>
+            <p class="pago-fecha">Fecha límite 21/3/2025</p>
+          </article>
+      
+          <!-- Tarjeta de pago pendiente 3 -->
+          <article class="pago-card">
+            <h3 class="pago-titulo">Préstamo Insumos</h3>
+            <p class="pago-subtitulo">Préstamo</p>
+            <p class="pago-monto">$60</p>
+            <p class="pago-fecha">Fecha límite 30/3/2025</p>
+          </article>
+        </section>
+    
+        <!-- Sección de productos -->
+        <section class="productos-section">
+          <h2 class="section-title">Productos</h2>
+        
+          <!-- Tarjeta de producto -->
+          <article class="producto-card">
+            <!-- Ajusta la ruta de la imagen según tu carpeta de assets -->
+            <img src="assets/img/camiseta.jpeg" alt="Camisa 11Z" class="producto-img" />
+            <div class="producto-info">
+              <h3 class="producto-nombre">Camisa 11Z</h3>
+              <p>Costo unitario:</p>
+              <p class="precio">$15.00</p>
+            </div>
+            <button class="producto-editar-button">Editar</button>
+          </article>
+      
+          <article class="producto-card">
+            <img src="assets/img/pantalon.jpeg" alt="Pantalón 11Z" class="producto-img" />
+            <div class="producto-info">
+              <h3 class="producto-nombre">Pantalón 11Z</h3>
+              <p>Costo unitario:</p>
+              <p class="precio">$20.00</p>
+            </div>
+            <button class="producto-editar-button">Editar</button>
+          </article>
+
+          <article class="producto-card">
+            <img src="assets/img/gorra.jpeg" alt="Gorra" class="producto-img" />
+            <div class="producto-info">
+              <h3 class="producto-nombre">Gorra 11Z</h3>
+              <p>Costo unitario:</p>
+              <p class="precio">$8.00</p>
+            </div>
+            <button class="producto-editar-button">Editar</button>
+        </section>
+    </div>
+    <div class="green-squares">
+        <div class="green-square-container">
+            <div class="green-square">
+                <img src="assets/img/usericon.png" alt="Añadir Trabajador" class="icon-class">
+            </div>
+            <p>Añadir Trabajador</p>
+        </div>
+        <div class="green-square-container">
+            <div class="green-square">
+                <img src="assets/img/bolsaicon.png" alt="Añadir Producto/Servicio" class="icon-class">
+            </div>
+            <p>Añadir Producto/Servicio</p>
+        </div>
+        <div class="green-square-container">
+            <div class="green-square">
+                <img src="assets/img/moneyicon.png" alt="Añadir Egreso" class="icon-class">
+            </div>
+            <p>Añadir Egreso</p>
+        </div>
+    </div>
+  <!-- Si necesitas JavaScript, enlázalo aquí -->
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

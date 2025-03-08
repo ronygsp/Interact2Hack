@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobros</title>
+    <link rel="stylesheet" href="assets/css/apis.css"> <!-- Enlace al archivo CSS -->
+    <script src="assets/js/scripts.js" defer></script> <!-- Enlace al archivo JavaScript -->
+</head>
+<body>
+    <h1>COBROS</h1>
+    <button onclick="createPaymentRequest()">Generar QR de Cobro</button>
+    <button onclick="getPaymentInfo()">Consultar el estado de un cobro</button>
+    
+    <!-- Contenedor donde se mostrará la imagen del QR -->
+    <div id="qr-container">
+        <img id="qr-image" alt="QR" style="display:none; width: 200px; height: 200px;"/>
+    </div>
+</body>
+</html>

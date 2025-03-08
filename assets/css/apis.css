@@ -1,0 +1,48 @@
+/* assets/css/apis.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #00C9A0;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #00C9A0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Ancho fijo para los botones */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #00997A; /* Color más oscuro para el hover */
+}
+
+#qr-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#qr-image {
+    display: none;
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00C9A0;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #452757;
+    margin: 0;
+}
+
+.precio {
+    font-size: 40px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addBusiness {
+    background: white;
+    color: #b500c9;
+    width: 70%; 
+    display: block;
+    margin: auto; 
+    font-size: large; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.business-card {
+    display: flex;
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.business-card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.business-info {
+    flex-grow: 1;
+}
+
+.view-business {
+    background: #00C9A0;
+    color: white;
+}
+
+/* Contenedor de la navegación (flecha + nombre) */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Botón de retroceso (flecha) */
+.back-button {
+    background: #fff;       /* Ejemplo: fondo blanco */
+    color: #00C9A0;         /* Mismo color principal del header */
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+/* Título de la empresa en el header */
+.company-name {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Sección de saldo disponible */
+.saldo-section {
+    background: #E8FFF2; 
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Texto que indica 'Saldo disponible' */
+.saldo-label {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Monto de saldo */
+.saldo-amount {
+    margin: 5px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón principal de 'Cobrar deuda!' */
+.cobrar-button {
+    background: #00C9A0;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Sección de pagos pendientes */
+.pagos-pendientes-section {
+    margin: 10px;
+    background: #fdf0edf7;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tarjetas de pago pendiente */
+.pago-card {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.pago-titulo {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.pago-subtitulo,
+.pago-monto,
+.pago-fecha {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+/* Monto en negrita */
+.pago-monto {
+    font-weight: bold;
+}
+
+/* Sección de productos */
+.productos-section {
+    margin: 10px;
+    background: #F3FFF9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.producto-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Imagen del producto */
+.producto-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Información del producto (nombre, precio) */
+.producto-info {
+    flex-grow: 1;
+}
+
+.producto-nombre {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.producto-precio {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+/* Botón para editar producto */
+.producto-editar-button {
+    background: #E0E0E0;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.green-squares {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.green-square {
+    width: 100px;
+    height: 80px;
+    background-color: #00C9A0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Make the squares rounded */
+}
+
+/* Center the text below each green square */
+.green-square-container {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-class {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+}

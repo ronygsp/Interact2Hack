@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "a2a31d3d-2fb4-4fc6-97e9-f4e0574b2adf",
+		"name": "DeunaAPIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2433592"
+	},
+	"item": [
+		{
+			"name": "Solicitar QR",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "9fd4ac9c11b6455fa7270dba42a135ff",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-secret",
+						"value": "70aa3a0caa6341f88b67ebb167ef7a50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"pointOfSale\": \"4121565\",\n  \"qrType\": \"dynamic\",\n  \"amount\": 5.19,\n  \"detail\": \"test postman GEO\",\n  \"internalTransactionReference\": \"IXWAHROMYSCEZWQ\",\n  \"format\": \"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apis-merchant.qa.deunalab.com/merchant/v1/payment/request",
+					"protocol": "https",
+					"host": [
+						"apis-merchant",
+						"qa",
+						"deunalab",
+						"com"
+					],
+					"path": [
+						"merchant",
+						"v1",
+						"payment",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Preguntar por pago",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "9fd4ac9c11b6455fa7270dba42a135ff",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-secret",
+						"value": "70aa3a0caa6341f88b67ebb167ef7a50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"idTransacionReference\": \"21f10448-0c6c-4b6b-9664-f23b897b58d1\",\n  \"idType\": \"0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apis-merchant.qa.deunalab.com/merchant/v1/payment/info",
+					"protocol": "https",
+					"host": [
+						"apis-merchant",
+						"qa",
+						"deunalab",
+						"com"
+					],
+					"path": [
+						"merchant",
+						"v1",
+						"payment",
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

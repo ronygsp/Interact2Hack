@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos y Servicios</title>
+    <link rel="stylesheet" href="assets/css/deuna-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <button class="back-button" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="header-title">Productos y Servicios</div>
+            <div class="header-action" onclick="location.href='payment-page.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+
+        <div class="profile-section" style="padding-bottom: 10px;">
+            <div class="profile-avatar" style="width: 60px; height: 60px; font-size: 24px;">JC</div>
+            <h2 class="profile-name">Joel Alexander Cuascota Sanchez</h2>
+            <div class="profile-badge">Vendedor</div>
+        </div>
+
+        <div class="products-container">
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="product-name">Bufanda Artesanal</div>
+                    <div class="product-description">Tejido a mano con lana de alpaca</div>
+                    <div class="product-price">$15.00</div>
+                </div>
+                <button class="add-to-cart" data-id="1" data-name="Bufanda Artesanal" data-price="15.00">+</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="product-name">Gorro de Lana</div>
+                    <div class="product-description">Diseño tradicional con motivos andinos</div>
+                    <div class="product-price">$12.00</div>
+                </div>
+                <button class="add-to-cart" data-id="2" data-name="Gorro de Lana" data-price="12.00">+</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="product-name">Bordado Personalizado</div>
+                    <div class="product-description">Servicio de bordado con el diseño de tu elección</div>
+                    <div class="product-price">$8.50</div>
+                </div>
+                <button class="add-to-cart" data-id="3" data-name="Bordado Personalizado" data-price="8.50">+</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="product-name">Pulsera Tejida</div>
+                    <div class="product-description">Hecha a mano con hilos de colores</div>
+                    <div class="product-price">$5.00</div>
+                </div>
+                <button class="add-to-cart" data-id="4" data-name="Pulsera Tejida" data-price="5.00">+</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="product-name">Clase de Tejido</div>
+                    <div class="product-description">Sesión personalizada de 2 horas</div>
+                    <div class="product-price">$25.00</div>
+                </div>
+                <button class="add-to-cart" data-id="5" data-name="Clase de Tejido" data-price="25.00">+</button>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <div class="nav-item">
+                <i class="fas fa-home"></i>
+                <p>Inicio</p>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-tag"></i>
+                <p>Promos</p>
+            </div>
+            <div class="nav-item active">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Compras</p>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-user"></i>
+                <p>Tú</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize cart
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            updateCartCount();
+            
+            // Add to cart functionality
+            const addButtons = document.querySelectorAll('.add-to-cart');
+            addButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const name = this.getAttribute('data-name');
+                    const price = parseFloat(this.getAttribute('data-price'));
+                    
+                    // Check if product is already in cart
+                    const existingItem = cart.find(item => item.id === id);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({
+                            id: id,
+                            name: name,
+                            price: price,
+                            quantity: 1
+                        });
+                    }
+                    
+                    // Save cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCount();
+                    
+                    // Show a brief animation
+                    this.textContent = '✓';
+                    setTimeout(() => {
+                        this.textContent = '+';
+                    }, 1000);
+                });
+            });
+            
+            function updateCartCount() {
+                const cartCount = document.getElementById('cart-count');
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = totalItems;
+                
+                // Add a badge to the cart icon if there are items
+                const headerAction = document.querySelector('.header-action');
+                if (totalItems > 0) {
+                    headerAction.style.position = 'relative';
+                    
+                    // Check if badge already exists
+                    let badge = headerAction.querySelector('.cart-badge');
+                    if (!badge) {
+                        badge = document.createElement('span');
+                        badge.className = 'cart-badge';
+                        headerAction.appendChild(badge);
+                    }
+                    badge.textContent = totalItems;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

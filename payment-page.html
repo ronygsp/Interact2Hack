@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="assets/css/deuna-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <button class="back-button" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="header-title">¿Cuánto quieres pagar?</div>
+            <div class="header-action">Salir</div>
+        </div>
+
+        <div class="payment-recipient">
+            <div class="recipient-initials">JA</div>
+            <div class="recipient-name">Joel Alexander Cuascota Sanchez</div>
+            <div class="recipient-phone">0980083853</div>
+        </div>
+
+        <div class="payment-amount">
+            <div class="amount-input">$0</div>
+        </div>
+
+        <div class="payment-categories">
+            <div class="category-item">
+                <i class="fas fa-plus"></i>
+                Motivo
+            </div>
+            <div class="category-item selected">
+                <i class="fas fa-utensils"></i>
+                Comida
+            </div>
+            <div class="category-item">
+                <i class="fas fa-money-bill-wave"></i>
+                Deuda
+            </div>
+        </div>
+
+        <div class="numpad">
+            <button class="numpad-key">1</button>
+            <button class="numpad-key">2</button>
+            <button class="numpad-key">3</button>
+            <button class="numpad-key">4</button>
+            <button class="numpad-key">5</button>
+            <button class="numpad-key">6</button>
+            <button class="numpad-key">7</button>
+            <button class="numpad-key">8</button>
+            <button class="numpad-key">9</button>
+            <button class="numpad-key">.</button>
+            <button class="numpad-key">0</button>
+            <button class="numpad-key delete-key">
+                <i class="fas fa-backspace"></i>
+            </button>
+        </div>
+
+        <button class="payment-continue">Continuar</button>
+    </div>
+
+    <script>
+        // Simple script to handle numpad functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const amountInput = document.querySelector('.amount-input');
+            const numpadKeys = document.querySelectorAll('.numpad-key');
+            
+            numpadKeys.forEach(key => {
+                key.addEventListener('click', function() {
+                    let currentAmount = amountInput.textContent.replace('$', '');
+                    
+                    if (this.classList.contains('delete-key')) {
+                        // Delete last character
+                        currentAmount = currentAmount.slice(0, -1);
+                        if (currentAmount === '') currentAmount = '0';
+                    } else if (this.textContent.trim() === '.') {
+                        // Add decimal point if not already present
+                        if (!currentAmount.includes('.')) {
+                            currentAmount += '.';
+                        }
+                    } else {
+                        // Add number
+                        if (currentAmount === '0') {
+                            currentAmount = this.textContent.trim();
+                        } else {
+                            currentAmount += this.textContent.trim();
+                        }
+                    }
+                    
+                    amountInput.textContent = '$' + currentAmount;
+                });
+            });
+
+            // Make category items toggleable
+            const categoryItems = document.querySelectorAll('.category-item');
+            categoryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    categoryItems.forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

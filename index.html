@@ -1,38 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Emprendimientos</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/homepage.css">
+    <script src="assets/js/qr.js" defer></script>
+    <title>Deuna Payment Mockup</title>
 </head>
 <body>
-    <!-- Contenedor Principal -->
-    <div class="container">
-        <!-- Encabezado -->
-        <header>
-            <h1>Mis Emprendimientos</h1>
-            
-        </header>
-
-        <!-- Lista de Emprendimientos -->
-        <main id="businessList">
-            <div class="business-card">
-                <div class="business-info">
-                    <h2>Marisianos CORP</h2>
-                    <p>Saldo disponible</p>
-                    <p class="precio">458.92</p>
-                    <p>Última transacción: +$500</p>
+    <div class="mobile-container">
+        <div class="logo">deuna!</div>
+        
+        <div class="qr-container">
+            <div class="qr-corner qr-corner-tl"></div>
+            <div class="qr-corner qr-corner-tr"></div>
+            <div class="qr-corner qr-corner-bl"></div>
+            <div class="qr-corner qr-corner-br"></div>
+            <img
+                id="qr-image"
+                style="display: block; min-width: 200px; min-height: 200px"
+            />
+        </div>
+        
+        <div class="account-info">Usa este QR o Nro de cuenta para cobrar</div>
+        <div class="account-number">
+            Nro. ******1076
+            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+        </div>
+        
+        <div class="action-buttons">
+            <div class="action-button">
+                <div class="button-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4b2d83" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <path d="M8 12h8"></path>
+                        <path d="M12 8v8"></path>
+                    </svg>
                 </div>
-                <button class="view-business">Ver</button>
+                <div class="button-text">Pagar a QR</div>
             </div>
-        </main>
-        <button id="addBusiness" onclick="location.href='crearEmprendimiento.html'">+ Crear Emprendimiento</button>
-
+            
+            <div class="action-button">
+                <div class="button-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4b2d83" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <div class="button-text">Verificar pago</div>
+            </div>
+            
+            <div class="action-button">
+                <div class="button-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4b2d83" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <div class="button-text">Metro UIO</div>
+            </div>
+        </div>
+        
+        <button class="login-button" onclick="window.location.href='deuna.html';">Ingresar a Deuna</button>
     </div>
-
-    <script src="assets/js/scripts.js"></script>
+    <script>
+        // Add any JavaScript functionality here
+        document.querySelector('.account-number').addEventListener('click', function() {
+            alert('Número de cuenta copiado al portapapeles');
+        });
+    </script>
 </body>
 </html>

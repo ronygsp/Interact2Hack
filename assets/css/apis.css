@@ -28,12 +28,44 @@ button {
     cursor: pointer;
     margin: 10px;
     transition: background-color 0.3s ease;
-    width: 200px; /* Ancho fijo para los botones */
+    width: 200px;
+    /* Ancho fijo para los botones */
     text-align: center;
 }
 
 button:hover {
-    background-color: #00997A; /* Color más oscuro para el hover */
+    background-color: #00997A;
+    /* Color más oscuro para el hover */
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #00C9A0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 1000;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    /* Ensure the bar doesn't overflow */
+}
+
+.notification-bar {
+    height: 5px;
+    width: 0%;
+    /* Starts at 0% and will grow to 100% */
+    background-color: #452757;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 #qr-container {
@@ -42,7 +74,7 @@ button:hover {
 }
 
 #qr-image {
-    display: none;
     width: 200px;
     height: 200px;
+    display: none;
 }

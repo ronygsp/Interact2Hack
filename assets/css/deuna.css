@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.app-container {
+    max-width: 390px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    background-color: #e8e3f3;
+    color: #6b3fa0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.greeting h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.wave {
+    font-size: 20px;
+}
+
+.notifications {
+    display: flex;
+    gap: 15px;
+}
+
+.bell-icon {
+    position: relative;
+}
+
+.notification-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+}
+
+.banner {
+    margin: 10px 15px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    position: relative;
+}
+
+.banner-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.banner-text p {
+    color: #666;
+    font-size: 14px;
+}
+
+.banner-icon {
+    margin-left: auto;
+    background-color: #e8e3f3;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e8e3f3;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9b9b9b;
+}
+
+.balance-container {
+    margin: 20px 15px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.balance-card {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.balance-info p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.balance-info h2 {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eye-icon {
+    color: #666;
+}
+
+.recharge-section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recharge-info p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.recharge-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.recharge-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #6b3fa0;
+}
+
+.other-bank {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.double-arrow {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.payment-banner {
+    margin: 20px 15px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-text h3 {
+    font-size: 18px;
+    max-width: 200px;
+}
+
+.payment-image {
+    width: 80px;
+    height: 80px;
+    background-color: #6b3fa0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #6b3fa0;
+}
+
+.quick-actions {
+    padding: 0 15px;
+}
+
+.action-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.action-icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.action-item p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.transfer-btn, .qr-btn {
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.transfer-btn {
+    background-color: white;
+    color: #6b3fa0;
+    border: 2px solid #6b3fa0;
+    flex: 1;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.qr-btn {
+    background-color: #6b3fa0;
+    color: white;
+    flex: 1;
+    justify-content: center;
+}
+.nav-bar {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.nav-item p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.nav-item.active {
+    color: #6b3fa0;
+}
+
+.new-tag {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    background-color: #4ade80;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* Add these styles to your CSS file */
+.action-icon.ripple {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-icon.ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.action-icon.ripple:active:after {
+    transform: scale(0, 0);
+    opacity: 0.3;
+    transition: 0s;
+}
+
+/* Add these styles to your CSS file */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(107, 63, 160, 0.4);
+    transform: scale(1);
+  }
+  
+  70% {
+    box-shadow: 0 0 0 6px rgba(107, 63, 160, 0);
+    transform: scale(1.05);
+  }
+  
+  100% {
+    box-shadow: 0 0 0 0 rgba(107, 63, 160, 0);
+    transform: scale(1);
+  }
+}
+
+.action-icon.pulsate {
+  position: relative;
+  animation: pulse 1s infinite;
+  background-color: #e8e3f3 !important;
+  cursor: pointer;
+}
+
+/* We can keep the ripple effect for when it's clicked */
+.action-icon.pulsate:active {
+  animation: none;
+  background-color: #d1c4e9 !important;
+}

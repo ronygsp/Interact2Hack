@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Emprendimientos</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Contenedor Principal -->
+  <div class="container">
+    <!-- Encabezado con Toggle -->
+    <header>
+      <div class="toggle-header">
+        <div class="toggle-inner">
+          <button id="tab-mis" class="toggle-button active tab-toggle-btn" onclick="showTab('businessList')">Mis Emprendimientos</button>
+        </div>
+        <div class="toggle-inner">
+          <button id="tab-empty" class="toggle-button tab-toggle-btn" onclick="showTab('emptyContent')">Explorar Emprendimientos</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+      <div id="businessList" class="tab-content active">
+        <!-- Lista de Emprendimientos -->
+        <div class="business-card">
+          <div class="business-info">
+            <h2>Marisianos CORP</h2>
+            <p>Saldo disponible</p>
+            <p class="precio">458.92</p>
+            <p>Última transacción: +$500</p>
+          </div>
+          <button class="view-business">Ver</button>
+        </div>
+      </div>
+      <div id="emptyContent" class="tab-content">
+        <!-- Begin verEmprendimientos.html content -->
+        <div class="title">NEGOCIOS EXITOSOS</div>
+        
+        <div class="menu-container">
+          <div class="menu-row">
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 1</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 2</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 3</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 4</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="search-bar">
+          <span class="search-icon">🔍</span>
+          <span class="search-text">Busca producto o servicio</span>
+        </div>
+        
+        <div class="menu-container">
+          <div class="menu-row">
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 1</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 2</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 3</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 4</div>
+            </div>
+          </div>
+          
+          <div class="menu-row">
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 5</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 6</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 7</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 8</div>
+            </div>
+          </div>
+          
+          <div class="menu-row">
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 9</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 10</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 11</div>
+            </div>
+            <div class="menu-item">
+              <div class="icon-container">
+                <span class="emoji-icon">✅</span>
+              </div>
+              <div class="menu-text">Empren 11</div>
+            </div>
+          </div>
+        </div>
+        <!-- End verEmprendimientos.html content -->
+      </div>
+    </main>
+    <button id="addBusiness" onclick="location.href='crearEmprendimiento.html'">+ Crear Emprendimiento</button>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      // Ocultar todos los contenidos de pestañas
+      var tabs = document.getElementsByClassName('tab-content');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      // Remover la clase active de los botones
+      document.getElementById('tab-mis').classList.remove('active');
+      document.getElementById('tab-empty').classList.remove('active');
+
+      // Mostrar el contenido seleccionado y marcar el botón correspondiente
+      document.getElementById(tabId).classList.add('active');
+      if (tabId === 'businessList') {
+        document.getElementById('tab-mis').classList.add('active');
+      } else if (tabId === 'emptyContent') {
+        document.getElementById('tab-empty').classList.add('active');
+      }
+      // Toggle "+ Crear Emprendimiento" button visibility
+      var addBusiness = document.getElementById('addBusiness');
+      if(tabId === 'emptyContent'){
+        addBusiness.style.display = "none";
+      } else {
+        addBusiness.style.display = "block";
+      }
+    }
+  </script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

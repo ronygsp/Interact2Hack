@@ -4,48 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Emprendimiento</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    
+    <link rel="stylesheet" href="assets/css/styles.css">    
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <button class="back-button">&larr;</button>
-            <h1 class="company-name">Maresianos CORP</h1>
-        </header>
-        
-        <h2>Crear Emprendimiento</h2>
-        
-        <label for="nombre">Ponle nombre a tu emprendimiento</label>
-        <input type="text" id="nombre" placeholder="Ingresa el nombre aquí">
-        
-        <label for="tipo">Tipo de negocio</label>
-        <select id="tipo">
-            <option>Opciones</option>
-            <option>Físico</option>
-            <option>Digital</option>
-            <option>Label3</option>
-            <option>Label4</option>
-            <option>Label5</option>
-        </select>
-        
-        <label for="ubicacion">Ingresa la ubicación de tu emprendimiento</label>
-        <input type="text" id="ubicacion" placeholder="Ingresa la ubicación aquí">
-        
-        <label for="contacto">¿Cómo te contactan tus clientes?</label>
-        <select id="contacto">
-            <option>Opciones</option>
-        </select>
-        
-        <label for="pago">¿Cómo prefieres que te paguen?</label>
-        <select id="pago">
-            <option>Opciones</option>
-            <option>Efectivo</option>
-            <option>Tarjeta de crédito</option>
-            <option>De Una!</option>
-            <option>Label4</option>
-            <option>Label5</option>
-        </select>
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <h2>¿Ya has emprendido antes?</h2>
+            <button id="si-button" class="splash-button">Sí</button>
+            <button id="no-button" class="splash-button">No</button>
+        </div>
     </div>
+    <div class="container">
+        <div class="form-card">
+            <h2>Crear Emprendimiento</h2>
+            
+            <label for="nombre" class="form-label">Ponle nombre a tu emprendimiento</label>
+            <input type="text" id="nombre" class="form-input" placeholder="Ingresa el nombre aquí">
+            
+            <label for="tipo" class="form-label">Tipo de negocio</label>
+            <select id="tipo" class="form-select">
+                <option>Opciones</option>
+                <option>Físico</option>
+                <option>Digital</option>
+                <option>Label3</option>
+                <option>Label4</option>
+                <option>Label5</option>
+            </select>
+            
+            <label for="ubicacion" class="form-label">Ingresa la ubicación de tu emprendimiento</label>
+            <input type="text" id="ubicacion" class="form-input" placeholder="Ingresa la ubicación aquí">
+            
+            <label for="contacto" class="form-label">¿Cómo te contactan tus clientes?</label>
+            <select id="contacto" class="form-select">
+                <option>Opciones</option>
+            </select>
+            
+            <label for="pago" class="form-label">¿Cómo prefieres que te paguen?</label>
+            <select id="pago" class="form-select">
+                <option>Opciones</option>
+                <option>Efectivo</option>
+                <option>Tarjeta de crédito</option>
+                <option>De Una!</option>
+                <option>Label4</option>
+                <option>Label5</option>
+            </select>
+        </div>
+    </div>
+    <script>
+        document.getElementById('si-button').addEventListener('click', function() {
+            document.getElementById('splash-screen').style.display = 'none';
+        });
+        document.getElementById('no-button').addEventListener('click', function() {
+            window.location.href = 'rutaDeEmprendimiento.html';
+        });
+    </script>
 </body>
 </html>
